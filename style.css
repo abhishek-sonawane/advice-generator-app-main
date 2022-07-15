@@ -3,6 +3,8 @@
 :root{
     --neon:hsl(150, 100%, 66%);
     --light-cyan:hsl(193, 38%, 86%);
+    --darkgrey-bg:hsl(218, 23%, 16%);
+    --lightgrey-bg:hsl(217, 19%, 24%);
 }
 
 
@@ -19,13 +21,13 @@ body{
     flex-direction: column;
     height: 100vh;
     font-family:'Manrope',sans-serif ;
-    background-color: hsl(218, 23%, 16%);
+    background-color: var(--darkgrey-bg);
 }
 
 .container{
    height: fit-content;
     max-width: 27.8em;
-    background-color: hsl(217, 19%, 24%);
+    background-color: var(--lightgrey-bg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,11 +62,12 @@ body{
 .dice-cont{
    display: flex;
    justify-content: center;
-   align-items: center;
+    align-items: center;
     border-radius: 50%;
     background-color: var(--neon);
     position: absolute;
     top: 91%;
+
 }
 
 .dice-cont:hover{
@@ -82,4 +85,16 @@ body{
 
 .dice-cont img{
    margin-top: 2px;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 3px;
+    color: var(--light-cyan);
+}
+
+@media (max-width:50rem) {
+    .container{
+        margin-inline: 2em;
+    }
 }

@@ -4,7 +4,6 @@ const advice_output = document.querySelector('.advice-head')
 const adviceBtn = document.querySelector('.new-quote')
 
 
-
 async function getAdvice(){
     const response = await fetch(apiUrl);
     const data = await response.json()
